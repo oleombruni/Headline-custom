@@ -1329,7 +1329,3 @@ html.dark h6 {
 .gh-cover-title {
     text-transform: capitalize;
 }
-
-.gh-subscribe-btn {
-    background-color: var(--background-color-dark);
-}
