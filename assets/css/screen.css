@@ -4,8 +4,10 @@
 :root {
     --background-color-dark: #151515;
     --foreground-color-dark: rgba(255, 255, 255, 0.95);
-    --font-sans: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
-    --font-serif: Lora, Georgia, Times, serif; /* stylelint-disable-line value-keyword-case */
+    --font-sans: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    /* stylelint-disable-line value-keyword-case */
+    --font-serif: Lora, Georgia, Times, serif;
+    /* stylelint-disable-line value-keyword-case */
     --head-nav-gap: 32px;
     --color-primary-text: var(--color-darker-gray);
     --h1-size: 4.4rem;
@@ -45,11 +47,11 @@ body:not(.is-head-stacked) .gh-head-inner {
     letter-spacing: -0.006em;
 }
 
-body:not(.is-head-transparent):not(.is-head-brand):not(.is-head-dark) .gh-head-logo img + img {
+body:not(.is-head-transparent):not(.is-head-brand):not(.is-head-dark) .gh-head-logo img+img {
     display: none;
 }
 
-body:is(.is-head-transparent, .is-head-brand, .is-head-dark) .gh-head-logo img + img {
+body:is(.is-head-transparent, .is-head-brand, .is-head-dark) .gh-head-logo img+img {
     opacity: 1;
 }
 
@@ -60,7 +62,7 @@ body:is(.is-head-transparent, .is-head-brand, .is-head-dark) .gh-head-logo img +
 
 /* Styles specific to grid style sections */
 
-.gh-topic-grid + .gh-topic-grid {
+.gh-topic-grid+.gh-topic-grid {
     margin-top: 80px;
 }
 
@@ -139,7 +141,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     background: var(--ghost-accent-color);
 }
 
-.gh-topic-grid .gh-card.large .gh-card-link > * {
+.gh-topic-grid .gh-card.large .gh-card-link>* {
     flex: 1;
 }
 
@@ -254,13 +256,13 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     color: var(--color-white);
 }
 
-.gh-card-footer > * + * {
+.gh-card-footer>*+* {
     display: flex;
     gap: 6px;
     align-items: center;
 }
 
-.gh-card-footer > * + *:not(script)::before {
+.gh-card-footer>*+*:not(script)::before {
     display: block;
     width: 2px;
     height: 2px;
@@ -312,7 +314,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     word-break: break-word;
 }
 
-.gh-topic-minimal .gh-card + .gh-card {
+.gh-topic-minimal .gh-card+.gh-card {
     margin-top: 16px;
 }
 
@@ -402,7 +404,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     opacity: 1;
 }
 
-.gh-author-image-list .gh-author-image + .gh-author-image {
+.gh-author-image-list .gh-author-image+.gh-author-image {
     margin-left: -20px;
 }
 
@@ -679,7 +681,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.gh-subscribe ~ .gh-foot-menu {
+.gh-subscribe~.gh-foot-menu {
     padding: 16px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -689,7 +691,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     font-weight: 500;
 }
 
-.gh-foot-menu .nav li + li::before {
+.gh-foot-menu .nav li+li::before {
     display: none;
 }
 
@@ -699,7 +701,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     letter-spacing: -0.006em;
 }
 
-.gh-subscribe ~ .gh-copyright {
+.gh-subscribe~.gh-copyright {
     margin-top: 64px;
 }
 
@@ -774,7 +776,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
         display: none;
     }
 
-    .gh-topic-minimal .gh-card + .gh-card {
+    .gh-topic-minimal .gh-card+.gh-card {
         margin-top: 12px;
     }
 
@@ -840,7 +842,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
         min-height: 480px;
     }
 
-    .gh-topic-grid .gh-card.large .gh-card-link > * {
+    .gh-topic-grid .gh-card.large .gh-card-link>* {
         width: 100%;
     }
 }
@@ -879,7 +881,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
         margin-bottom: 0;
     }
 
-    .gh-author-image-list .gh-author-image + .gh-author-image {
+    .gh-author-image-list .gh-author-image+.gh-author-image {
         margin-left: -16px;
     }
 
@@ -973,7 +975,7 @@ html.dark .no-image .author-social-link a {
     color: color-mod(var(--foreground-color-dark) a(-0.15));
 }
 
-html.dark .gh-content > [id] {
+html.dark .gh-content>[id] {
     color: color-mod(var(--foreground-color-dark) a(-0.05));
 }
 
@@ -981,7 +983,7 @@ html.dark .gh-content pre {
     background: color-mod(var(--background-color-dark) l(-8%));
 }
 
-html.dark .gh-content :not(pre) > code {
+html.dark .gh-content :not(pre)>code {
     background: color-mod(var(--color-darkergray) l(+6%));
     border-color: color-mod(var(--background-color-dark) l(+8%));
     color: var(--color-wash);
@@ -1080,10 +1082,10 @@ html.dark a {
     color: var(--color-lighter-gray);
 }
 
-html.dark h1, 
+html.dark h1,
 html.dark h2,
 html.dark h3,
-html.dark h4, 
+html.dark h4,
 html.dark h5,
 html.dark h6 {
     color: var(--color-lighter-gray);
@@ -1094,188 +1096,188 @@ html.dark h6 {
         color: rgba(255, 255, 255, 0.75);
         background: var(--background-color-dark);
     }
-    
+
     html.auto img {
         opacity: 0.87;
     }
-    
+
     html.auto kbd {
         background: color-mod(var(--background-color-dark) l(+5%));
     }
-    
+
     html.auto figcaption a {
         color: var(--foreground-color-dark);
     }
-    
+
     html.auto .gh-head {
         color: var(--foreground-color-dark);
         background: var(--background-color-dark);
     }
-    
+
     html.auto .gh-burger-box {
         color: var(--foreground-color-dark);
     }
-    
+
     html.auto .site-header-content {
         color: var(--foreground-color-dark);
     }
-    
+
     html.auto .post-card-image {
         background: var(--background-color-dark);
     }
-    
+
     html.auto :is(.post-card-tags, .post-card-meta, .article-tag a, .byline-meta-content) {
         color: color-mod(var(--color-secondary-text) l(-22%));
     }
-    
+
     html.auto .post-card-featured {
         color: var(--foreground-color-dark);
     }
-    
+
     html.auto .post-card-title {
         color: var(--foreground-color-dark);
     }
-    
+
     html.auto .article-excerpt {
         color: var(--color-secondary-text);
     }
-    
+
     html.auto .post-full-image {
         background-color: color-mod(var(--background-color-dark) l(+8%));
     }
-    
+
     html.auto .author-avatar {
         border-color: var(--background-color-dark);
         background-color: color-mod(var(--background-color-dark) l(+8%));
     }
-    
+
     html.auto .author-profile-image {
         opacity: 1;
     }
-    
+
     html.auto .author-profile-image path {
         fill: var(--background-color-dark);
     }
-    
+
     html.auto .article-byline-meta .author-name a {
         color: var(--foreground-color-dark);
     }
-    
+
     html.auto .no-image .author-social-link a {
         color: color-mod(var(--foreground-color-dark) a(-0.15));
     }
-    
-    html.auto .gh-content > [id] {
+
+    html.auto .gh-content>[id] {
         color: color-mod(var(--foreground-color-dark) a(-0.05));
     }
-    
+
     html.auto .gh-content -pre {
         background: color-mod(var(--background-color-dark) l(-8%));
     }
-    
-    html.auto .gh-content :not(pre) > code {
+
+    html.auto .gh-content :not(pre)>code {
         background: color-mod(var(--color-darkergray) l(+6%));
         border-color: color-mod(var(--background-color-dark) l(+8%));
         color: var(--color-wash);
     }
-    
+
     html.auto .gh-content a:not(.kg-btn):not(.kg-nft-card-container):not(.kg-product-card-button):not(.kg-header-card-button) {
         color: var(--foreground-color-dark);
     }
-    
+
     html.auto .gh-content strong {
         color: var(--foreground-color-dark);
     }
-    
+
     html.auto .gh-content em {
         color: var(--foreground-color-dark);
     }
-    
+
     html.auto .gh-content code {
         color: #fff;
         background: #000;
     }
-    
+
     html.auto hr {
         border-top-color: color-mod(var(--background-color-dark) l(+8%));
     }
-    
+
     html.auto .gh-content hr:after {
         background: color-mod(var(--background-color-dark) l(+8%));
     }
-    
+
     html.auto figcaption {
         color: color-mod(var(--foreground-color-dark) a(-0.35));
     }
-    
+
     html.auto .gh-content table td:first-child {
         background-image: linear-gradient(to right, var(--background-color-dark) 50%, color-mod(var(--background-color-dark) a(0%)) 100%);
     }
-    
+
     html.auto .gh-content table td:last-child {
         background-image: linear-gradient(to left, var(--background-color-dark) 50%, color-mod(var(--background-color-dark) a(0%)) 100%);
     }
-    
+
     html.auto .gh-content table th {
         color: color-mod(var(--foreground-color-dark) a(-0.1));
         background-color: color-mod(var(--background-color-dark) l(+8%));
     }
-    
+
     html.auto .gh-content table th,
     html.auto .gh-content table td {
         border: color-mod(var(--background-color-dark) l(+8%)) 1px solid;
     }
-    
+
     html.auto .gh-content input {
         color: color-mod(var(--color-midgray) l(-30%));
     }
-    
+
     html.auto .site-archive-header .no-image {
         color: var(--foreground-color-dark);
         background-color: var(--background-color-dark);
     }
-    
+
     html.auto .kg-header-card.kg-style-dark {
         background: color-mod(var(--color-darkergray) l(-5%));
     }
-    
+
     html.auto .kg-header-card.kg-style-light {
         background: color-mod(var(--color-darkergray) l(+5%));
     }
-    
+
     html.auto .kg-header-card h2.kg-header-card-header,
     html.auto .kg-header-card h3.kg-header-card-subheader {
         color: var(--foreground-color-dark);
     }
-    
+
     html.auto .footer-cta-title {
         color: var(--foreground-color-dark);
     }
-    
+
     html.auto .gh-topic-footer {
         border-top: 1px solid var(--color-darkergray);
     }
-    
+
     html.auto .gh-topic-grid .gh-card:not(:only-child).large {
         border-bottom: 1px solid var(--color-darkergray);
     }
-    
+
     html.auto .gh-topic-grid .gh-card.featured.large .gh-card-footer {
         color: var(--background-color-dark);
     }
-    
+
     html.auto .gh-topic-grid .gh-card.featured.large .gh-card-title {
         color: var(--color-light-gray);
     }
-    
+
     html.auto a {
         color: var(--color-lighter-gray);
     }
-    
-    html.auto h1, 
+
+    html.auto h1,
     html.auto h2,
     html.auto h3,
-    html.auto h4, 
+    html.auto h4,
     html.auto h5,
     html.auto h6 {
         color: var(--color-lighter-gray);
@@ -1313,6 +1315,7 @@ html.dark h6 {
 .gh-foot {
     padding-top: 0;
     margin-top: 0;
+    background-color: var(--background-color-dark);
 }
 
 .ms-archive .gh-topic-link {
@@ -1325,4 +1328,8 @@ html.dark h6 {
 
 .gh-cover-title {
     text-transform: capitalize;
+}
+
+.gh-subscribe-btn {
+    background-color: var(--background-color-dark);
 }
