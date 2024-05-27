@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.locale}}">
+<html lang="{{@site.locale}}"{{#match @custom.background "Dark"}} class="dark"{{else match @custom.background "Browser-dependent"}} class="auto"{{/match}}>
 
 <head>
     <meta charset="utf-8">

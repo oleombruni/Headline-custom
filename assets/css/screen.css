@@ -2,12 +2,17 @@
 @import "fonts.css";
 
 :root {
+    --background-color-dark: #151515;
+    --foreground-color-dark: rgba(255, 255, 255, 0.95);
     --font-sans: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
     --font-serif: Lora, Georgia, Times, serif; /* stylelint-disable-line value-keyword-case */
     --head-nav-gap: 32px;
     --color-primary-text: var(--color-darker-gray);
     --h1-size: 4.4rem;
     --footer-spacing: 120px;
+    --color-darkergray: #15171A;
+    --color-wash: #e5eff5;
+    --color-midgray: #738a94;
 }
 
 @media (max-width: 767px) {
@@ -891,4 +896,433 @@ body:not(.home-template) .gh-topic-grid .gh-card {
         margin-top: -6px;
         line-height: 1;
     }
+}
+
+html.dark body {
+    color: rgba(255, 255, 255, 0.75);
+    background: var(--background-color-dark);
+}
+
+html.dark img {
+    opacity: 0.87;
+}
+
+html.dark kbd {
+    background: color-mod(var(--background-color-dark) l(+5%));
+}
+
+html.dark figcaption a {
+    color: var(--foreground-color-dark);
+}
+
+html.dark .gh-head {
+    color: var(--foreground-color-dark);
+    background: var(--background-color-dark);
+}
+
+html.dark .gh-burger-box {
+    color: var(--foreground-color-dark);
+}
+
+html.dark .site-header-content {
+    color: var(--foreground-color-dark);
+}
+
+html.dark .post-card-image {
+    background: var(--background-color-dark);
+}
+
+html.dark :is(.post-card-tags, .post-card-meta, .article-tag a, .byline-meta-content) {
+    color: color-mod(var(--color-secondary-text) l(-22%));
+}
+
+html.dark .post-card-featured {
+    color: var(--foreground-color-dark);
+}
+
+html.dark .post-card-title {
+    color: var(--foreground-color-dark);
+}
+
+html.dark .article-excerpt {
+    color: var(--color-secondary-text);
+}
+
+html.dark .post-full-image {
+    background-color: color-mod(var(--background-color-dark) l(+8%));
+}
+
+html.dark .author-avatar {
+    border-color: var(--background-color-dark);
+    background-color: color-mod(var(--background-color-dark) l(+8%));
+}
+
+html.dark .author-profile-image {
+    opacity: 1;
+}
+
+html.dark .author-profile-image path {
+    fill: var(--background-color-dark);
+}
+
+html.dark .article-byline-meta .author-name a {
+    color: var(--foreground-color-dark);
+}
+
+html.dark .no-image .author-social-link a {
+    color: color-mod(var(--foreground-color-dark) a(-0.15));
+}
+
+html.dark .gh-content > [id] {
+    color: color-mod(var(--foreground-color-dark) a(-0.05));
+}
+
+html.dark .gh-content pre {
+    background: color-mod(var(--background-color-dark) l(-8%));
+}
+
+html.dark .gh-content :not(pre) > code {
+    background: color-mod(var(--color-darkergray) l(+6%));
+    border-color: color-mod(var(--background-color-dark) l(+8%));
+    color: var(--color-wash);
+}
+
+html.dark .gh-content a:not(.kg-btn):not(.kg-nft-card-container):not(.kg-product-card-button):not(.kg-header-card-button) {
+    color: var(--foreground-color-dark);
+}
+
+html.dark .gh-content strong {
+    color: var(--foreground-color-dark);
+}
+
+html.dark .gh-content em {
+    color: var(--foreground-color-dark);
+}
+
+html.dark .gh-content code {
+    color: #fff;
+    background: #000;
+}
+
+html.dark hr {
+    border-top-color: color-mod(var(--background-color-dark) l(+8%));
+}
+
+html.dark .gh-content hr:after {
+    background: color-mod(var(--background-color-dark) l(+8%));
+}
+
+html.dark figcaption {
+    color: color-mod(var(--foreground-color-dark) a(-0.35));
+}
+
+html.dark .gh-content table td:first-child {
+    background-image: linear-gradient(to right, var(--background-color-dark) 50%, color-mod(var(--background-color-dark) a(0%)) 100%);
+}
+
+html.dark .gh-content table td:last-child {
+    background-image: linear-gradient(to left, var(--background-color-dark) 50%, color-mod(var(--background-color-dark) a(0%)) 100%);
+}
+
+html.dark .gh-content table th {
+    color: color-mod(var(--foreground-color-dark) a(-0.1));
+    background-color: color-mod(var(--background-color-dark) l(+8%));
+}
+
+html.dark .gh-content table th,
+html.dark .gh-content table td {
+    border: color-mod(var(--background-color-dark) l(+8%)) 1px solid;
+}
+
+html.dark .gh-content input {
+    color: color-mod(var(--color-midgray) l(-30%));
+}
+
+html.dark .site-archive-header .no-image {
+    color: var(--foreground-color-dark);
+    background-color: var(--background-color-dark);
+}
+
+html.dark .kg-header-card.kg-style-dark {
+    background: color-mod(var(--color-darkergray) l(-5%));
+}
+
+html.dark .kg-header-card.kg-style-light {
+    background: color-mod(var(--color-darkergray) l(+5%));
+}
+
+html.dark .kg-header-card h2.kg-header-card-header,
+html.dark .kg-header-card h3.kg-header-card-subheader {
+    color: var(--foreground-color-dark);
+}
+
+html.dark .footer-cta-title {
+    color: var(--foreground-color-dark);
+}
+
+html.dark .gh-topic-footer {
+    border-top: 1px solid var(--color-darkergray);
+}
+
+html.dark .gh-topic-grid .gh-card:not(:only-child).large {
+    border-bottom: 1px solid var(--color-darkergray);
+}
+
+html.dark .gh-topic-grid .gh-card.featured.large .gh-card-footer {
+    color: var(--background-color-dark);
+}
+
+html.dark .gh-topic-grid .gh-card.featured.large .gh-card-title {
+    color: var(--color-light-gray);
+}
+
+html.dark a {
+    color: var(--color-lighter-gray);
+}
+
+html.dark h1, 
+html.dark h2,
+html.dark h3,
+html.dark h4, 
+html.dark h5,
+html.dark h6 {
+    color: var(--color-lighter-gray);
+}
+
+@media (prefers-color-scheme: dark) {
+    html.auto body {
+        color: rgba(255, 255, 255, 0.75);
+        background: var(--background-color-dark);
+    }
+    
+    html.auto img {
+        opacity: 0.87;
+    }
+    
+    html.auto kbd {
+        background: color-mod(var(--background-color-dark) l(+5%));
+    }
+    
+    html.auto figcaption a {
+        color: var(--foreground-color-dark);
+    }
+    
+    html.auto .gh-head {
+        color: var(--foreground-color-dark);
+        background: var(--background-color-dark);
+    }
+    
+    html.auto .gh-burger-box {
+        color: var(--foreground-color-dark);
+    }
+    
+    html.auto .site-header-content {
+        color: var(--foreground-color-dark);
+    }
+    
+    html.auto .post-card-image {
+        background: var(--background-color-dark);
+    }
+    
+    html.auto :is(.post-card-tags, .post-card-meta, .article-tag a, .byline-meta-content) {
+        color: color-mod(var(--color-secondary-text) l(-22%));
+    }
+    
+    html.auto .post-card-featured {
+        color: var(--foreground-color-dark);
+    }
+    
+    html.auto .post-card-title {
+        color: var(--foreground-color-dark);
+    }
+    
+    html.auto .article-excerpt {
+        color: var(--color-secondary-text);
+    }
+    
+    html.auto .post-full-image {
+        background-color: color-mod(var(--background-color-dark) l(+8%));
+    }
+    
+    html.auto .author-avatar {
+        border-color: var(--background-color-dark);
+        background-color: color-mod(var(--background-color-dark) l(+8%));
+    }
+    
+    html.auto .author-profile-image {
+        opacity: 1;
+    }
+    
+    html.auto .author-profile-image path {
+        fill: var(--background-color-dark);
+    }
+    
+    html.auto .article-byline-meta .author-name a {
+        color: var(--foreground-color-dark);
+    }
+    
+    html.auto .no-image .author-social-link a {
+        color: color-mod(var(--foreground-color-dark) a(-0.15));
+    }
+    
+    html.auto .gh-content > [id] {
+        color: color-mod(var(--foreground-color-dark) a(-0.05));
+    }
+    
+    html.auto .gh-content -pre {
+        background: color-mod(var(--background-color-dark) l(-8%));
+    }
+    
+    html.auto .gh-content :not(pre) > code {
+        background: color-mod(var(--color-darkergray) l(+6%));
+        border-color: color-mod(var(--background-color-dark) l(+8%));
+        color: var(--color-wash);
+    }
+    
+    html.auto .gh-content a:not(.kg-btn):not(.kg-nft-card-container):not(.kg-product-card-button):not(.kg-header-card-button) {
+        color: var(--foreground-color-dark);
+    }
+    
+    html.auto .gh-content strong {
+        color: var(--foreground-color-dark);
+    }
+    
+    html.auto .gh-content em {
+        color: var(--foreground-color-dark);
+    }
+    
+    html.auto .gh-content code {
+        color: #fff;
+        background: #000;
+    }
+    
+    html.auto hr {
+        border-top-color: color-mod(var(--background-color-dark) l(+8%));
+    }
+    
+    html.auto .gh-content hr:after {
+        background: color-mod(var(--background-color-dark) l(+8%));
+    }
+    
+    html.auto figcaption {
+        color: color-mod(var(--foreground-color-dark) a(-0.35));
+    }
+    
+    html.auto .gh-content table td:first-child {
+        background-image: linear-gradient(to right, var(--background-color-dark) 50%, color-mod(var(--background-color-dark) a(0%)) 100%);
+    }
+    
+    html.auto .gh-content table td:last-child {
+        background-image: linear-gradient(to left, var(--background-color-dark) 50%, color-mod(var(--background-color-dark) a(0%)) 100%);
+    }
+    
+    html.auto .gh-content table th {
+        color: color-mod(var(--foreground-color-dark) a(-0.1));
+        background-color: color-mod(var(--background-color-dark) l(+8%));
+    }
+    
+    html.auto .gh-content table th,
+    html.auto .gh-content table td {
+        border: color-mod(var(--background-color-dark) l(+8%)) 1px solid;
+    }
+    
+    html.auto .gh-content input {
+        color: color-mod(var(--color-midgray) l(-30%));
+    }
+    
+    html.auto .site-archive-header .no-image {
+        color: var(--foreground-color-dark);
+        background-color: var(--background-color-dark);
+    }
+    
+    html.auto .kg-header-card.kg-style-dark {
+        background: color-mod(var(--color-darkergray) l(-5%));
+    }
+    
+    html.auto .kg-header-card.kg-style-light {
+        background: color-mod(var(--color-darkergray) l(+5%));
+    }
+    
+    html.auto .kg-header-card h2.kg-header-card-header,
+    html.auto .kg-header-card h3.kg-header-card-subheader {
+        color: var(--foreground-color-dark);
+    }
+    
+    html.auto .footer-cta-title {
+        color: var(--foreground-color-dark);
+    }
+    
+    html.auto .gh-topic-footer {
+        border-top: 1px solid var(--color-darkergray);
+    }
+    
+    html.auto .gh-topic-grid .gh-card:not(:only-child).large {
+        border-bottom: 1px solid var(--color-darkergray);
+    }
+    
+    html.auto .gh-topic-grid .gh-card.featured.large .gh-card-footer {
+        color: var(--background-color-dark);
+    }
+    
+    html.auto .gh-topic-grid .gh-card.featured.large .gh-card-title {
+        color: var(--color-light-gray);
+    }
+    
+    html.auto a {
+        color: var(--color-lighter-gray);
+    }
+    
+    html.auto h1, 
+    html.auto h2,
+    html.auto h3,
+    html.auto h4, 
+    html.auto h5,
+    html.auto h6 {
+        color: var(--color-lighter-gray);
+    }
+}
+
+.gh-author-image {
+    display: none;
+}
+
+.gh-author-name {
+    display: none;
+}
+
+.gh-card-author {
+    display: none;
+}
+
+.gh-card-footer-sep {
+    display: none;
+}
+
+.gh-article-length {
+    display: none;
+}
+
+.gh-article-meta-sep {
+    display: none;
+}
+
+.gh-subscribe-title {
+    display: none;
+}
+
+.gh-foot {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.ms-archive .gh-topic-link {
+    display: none;
+}
+
+.ms-archive .gh-topic-list {
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+}
+
+.gh-cover-title {
+    text-transform: capitalize;
 }

@@ -13,6 +13,7 @@ const zip = require('gulp-zip');
 
 // postcss plugins
 const easyimport = require('postcss-easy-import');
+const colormod = require('postcss-color-mod-function');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
@@ -42,6 +43,7 @@ function css(done) {
         src('assets/css/screen.css', {sourcemaps: true}),
         postcss([
             easyimport,
+            colormod,
             autoprefixer(),
             cssnano()
         ]),
