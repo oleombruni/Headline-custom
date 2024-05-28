@@ -1,5 +1,6 @@
 @import "@tryghost/shared-theme-assets/assets/css/v1/screen.css";
 @import "fonts.css";
+@import "prism.css";
 
 :root {
     --background-color-dark: #151515;
@@ -1001,10 +1002,10 @@ html.dark .gh-content em {
     color: var(--foreground-color-dark);
 }
 
-html.dark .gh-content code {
-    color: #fff;
-    background: #000;
-}
+/* html.dark .gh-content code {
+    color: var(--color-primary-text);
+    background: var(--color-lighter-gray);
+} */
 
 html.dark hr {
     border-top-color: color-mod(var(--background-color-dark) l(+8%));
@@ -1193,10 +1194,10 @@ html.dark h6 {
         color: var(--foreground-color-dark);
     }
 
-    html.auto .gh-content code {
-        color: #fff;
-        background: #000;
-    }
+    /* html.auto .gh-content code {
+        color: var(--color-primary-text);
+        background: var(--color-lighter-gray);
+    } */
 
     html.auto hr {
         border-top-color: color-mod(var(--background-color-dark) l(+8%));
