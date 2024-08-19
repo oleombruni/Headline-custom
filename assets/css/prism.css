@@ -32,7 +32,7 @@ https://prismjs.com/download.html?ref=ghost.org#themes=prism-tomorrow&languages=
  
  /* Code blocks */
  pre[class*="language-"] {
-     padding: 1em;
+     padding: 1.5em;
      margin: .5em 0;
      overflow: auto;
  }
@@ -247,6 +247,7 @@ https://prismjs.com/download.html?ref=ghost.org#themes=prism-tomorrow&languages=
      z-index: 10;
      top: .3em;
      right: .2em;
+     left: .2em;
      /* transition: opacity 0.3s ease-in-out;
      opacity: 0; */
  }
@@ -263,6 +264,10 @@ https://prismjs.com/download.html?ref=ghost.org#themes=prism-tomorrow&languages=
  
  div.code-toolbar > .toolbar > .toolbar-item {
      display: inline-block;
+ }
+
+ div.code-toolbar > .toolbar > .toolbar-item:last-child {
+     float: right;
  }
  
  div.code-toolbar > .toolbar > .toolbar-item > a {
@@ -281,18 +286,28 @@ https://prismjs.com/download.html?ref=ghost.org#themes=prism-tomorrow&languages=
      -moz-user-select: none;
      -ms-user-select: none;
  }
+
+div.code-toolbar > .toolbar > .toolbar-item > span {
+    color: rgba(187, 187, 187, 0.75);
+    font-size: .8em;
+    padding: 0 .5em;
+    background: inherit !important;
+    /* border-radius: .5em; */
+    border: none;
+    cursor: default;
+}
  
  div.code-toolbar > .toolbar > .toolbar-item > a,
- div.code-toolbar > .toolbar > .toolbar-item > button,
- div.code-toolbar > .toolbar > .toolbar-item > span {
+ div.code-toolbar > .toolbar > .toolbar-item > button {
      color: #bbb;
      font-size: .8em;
-     padding: 0 .5em;
+     padding: .05em .7em;
      background: #f5f2f0;
      background: rgba(224, 224, 224, 0.2);
      box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
-     /* border-radius: .5em; */
+     border-radius: .5em;
      border: none;
+     cursor: pointer;
  }
  
  div.code-toolbar > .toolbar > .toolbar-item > a:hover,
