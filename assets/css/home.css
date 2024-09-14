@@ -1,0 +1,107 @@
+.home-template.has-cover .gh-head-button {
+    color: #fff;
+    background-color: var(--color-dark-gray);
+}
+
+.p-outer {
+    padding: 5vmin max(4vmin, 20px) 0;
+}
+
+.p-outer:first-of-type {
+    background-color: color-mix(in srgb, var(--ghost-accent-color) 20%, transparent);
+}
+
+.p-inner {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.p-hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.2vmin;
+}
+
+.p-hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.p-hero-right img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    transform: translateY(24px);
+}
+
+.p-hero h1 {
+    text-transform: uppercase;
+}
+
+.p-hero p {
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.p-hero p:first-of-type {
+    padding-top: 5vmin;
+}
+
+.p-hero p+p {
+    margin-top: 1.6rem;
+}
+
+.p-hero-left a {
+    color: var(--ghost-accent-color);
+}
+
+.p-post-container {
+    margin-block: 10.2vmin;
+    margin-inline: auto;
+}
+
+.p-post-container h2 {
+    text-transform: uppercase;
+}
+
+.p-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4vmin;
+}
+
+.p-posts-grid p {
+    padding: 2vmin 0;
+    font-size: 20px;
+}
+
+.p-post-card img {
+    width: 100%;
+    max-height: 500px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.p-post-card h3 {
+    padding-inline: 10px;
+    margin-block: 10px 0;
+}
+
+.p-post-card a:hover {
+    color: var(--ghost-accent-color);
+}
+
+@media (min-width: 768px) {
+    .p-hero {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .p-hero-right img {
+        max-height: none;
+        aspect-ratio: 1 / 1;
+        filter: drop-shadow(2px 3px 10px rgb(0 0 0 / 0.25));
+        object-fit: contain;
+        object-position: right;
+    }
+}

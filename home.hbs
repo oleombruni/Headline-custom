@@ -1,67 +1,39 @@
 {{!< default}}
 
-<main class="gh-main gh-outer">
-    <div class="gh-inner">
-        <section class="gh-topic gh-topic-grid">
-            <h2 class="gh-topic-name">
-                {{#match pagination.pages ">" 1}}
-                    <a href="{{@site.url}}/page/2">Latest</a>
-                {{else}}
-                    Latest
-                {{/match}}
-            </h2>
-
-            <div class="gh-topic-content">
-                {{#foreach posts limit="7"}}
-                    {{> "loop-grid"}}
-                {{/foreach}}
+<main id="main">
+    <section class="p-outer">
+        <div class="p-inner p-hero">
+            <div class="p-hero-left">
+                <div>
+                    <h1>Welcome!</h1>
+                    <p>Hi!👋 I'm <strong>Orlando</strong> and you've landed on my personal website.</p>
+                    <p>Here you'll find a few things about who I am and what I do.</p>
+                    <p>I may also write some blog posts here and there if there's something I want to speak about.</p>
+                    <p>If you want, you can <a href="mailto:contact@oleombruni.me">drop me an email</a>.</p>
+                </div>
             </div>
-
-            <footer class="gh-topic-footer">
-                {{#match pagination.pages ">" 1}}
-                    <a class="gh-topic-link" href="{{@site.url}}/page/2">Show more {{> "icons/arrow"}}</a>
-                {{/match}}
-            </footer>
-        </section>
-
-        {{#if @custom.enter_tag_slugs_for_primary_sections}}
-            {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_primary_sections}}]"}}
-                {{#foreach tags}}
-                    {{> "topic-grid"}}
-                {{/foreach}}
-            {{/get}}
-        {{else}}
-            {{#match posts.length ">" 1}}
-                {{#get "tags" include="count.posts" order="count.posts desc" limit="3"}}
-                    {{#foreach tags}}
-                        {{> "topic-grid"}}
-                    {{/foreach}}
-                {{/get}}
-            {{/match}}
-        {{/if}}
-
-        {{#if @custom.enter_tag_slugs_for_secondary_sections}}
-            {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_secondary_sections}}]"}}
-                {{#if tags}}
-                    <div class="gh-topic-list">
-                        {{#foreach tags}}
-                            {{> "topic-minimal"}}
+            <div class="p-hero-right">
+                <img src="{{img_url @site.cover_image size="l"}}" alt="Home image" />
+            </div>
+        </div>
+    </section>
+    <section class="p-outer">
+        <div class="p-inner">
+            <h2>Latest posts</h2>
+            <div class="p-posts-grid">
+                {{#get "posts" limit="all"}}
+                    {{#match posts.length "=" 0}}
+                        <p><em>Nothing here! </em>...for now 🧐</p>
+                    {{else}}
+                        {{#foreach posts}}
+                            <article class="p-post-card">
+                                <img src="{{img_url feature_image size="m"}}" alt="{{feature_image_alt}}" />
+                                <h3><a href="{{url}}">{{title}}</a></h3>
+                            </article>
                         {{/foreach}}
-                    </div>
-                {{/if}}
-            {{/get}}
-        {{else}}
-            {{#match posts.length ">" 1}}
-                {{#get "tags" include="count.posts" order="count.posts desc"}}
-                    {{#if tags.[3]}}
-                        <div class="gh-topic-list">
-                            {{#foreach tags from="4" limit="3"}}
-                                {{> "topic-minimal"}}
-                            {{/foreach}}
-                        </div>
-                    {{/if}}
+                    {{/match}}
                 {{/get}}
-            {{/match}}
-        {{/if}}
-    </div>
+            </div>
+        </div>
+    </section>
 </main>
